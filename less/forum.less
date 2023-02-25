@@ -1,3 +1,4 @@
+
 // 特殊语法说明
 // 1: .classA.classB    A类内的B类(必须为直接子类)
 // 2: .classA .classB   A类内的B类(可以间隔其它类)
@@ -147,6 +148,25 @@ p.welcomeText:before{content:"\f507\0020";font-family:'Font Awesome 5 Free';disp
 
 
 
+
+// 论坛首页(index page)
+
+// 未读/已读的颜色改善
+.IndexPage .read .DiscussionListItem-title{color:#676767!important}
+.IndexPage .read .DiscussionListItem-info{color:#7c7c7c!important}
+.IndexPage .read .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+.IndexPage .unread .DiscussionListItem-title{color:#676767!important}
+.IndexPage .unread .DiscussionListItem-info{color:#7c7c7c!important}
+.IndexPage .unread .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+// 修改未读的图标及颜色
+.IndexPage .unread .DiscussionListItem-count{color:#7b7bf1}
+.IndexPage .unread .DiscussionListItem-count:before{content: "\f4ad"} // 图标
+
+  // 对不展示预览的帖子，修正到应有的高度
+.DiscussionListItem{min-height:85px}
+
+
+
 // 贴子页面(discussion page)
 
 // 调整post间分割线的样式(仿贴吧)
@@ -171,6 +191,8 @@ p.welcomeText:before{content:"\f507\0020";font-family:'Font Awesome 5 Free';disp
 .DiscussionPage .DiscussionPage-list{display:none}
 .Navigation-pin{display:none}
 
+
+
 // 用户页(user page)
 
 // 对用户页的post单独做一些显示效果
@@ -179,6 +201,18 @@ p.welcomeText:before{content:"\f507\0020";font-family:'Font Awesome 5 Free';disp
 .PostsUserPage .item-bestAnswerPost{display: none}
 // 压缩post间距
 .PostsUserPage .Post{padding-bottom: 6px}
+// 未读/已读的颜色改善
+.UserPage .read .DiscussionListItem-title{color:#676767!important}
+.UserPage .read .DiscussionListItem-info{color:#7c7c7c!important}
+.UserPage .read .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+.UserPage .unread .DiscussionListItem-title{color:#676767!important}
+.UserPage .unread .DiscussionListItem-info{color:#7c7c7c!important}
+.UserPage .unread .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+// 修改未读的图标及颜色
+.UserPage .unread .DiscussionListItem-count{color:#7b7bf1}
+.UserPage .unread .DiscussionListItem-count:before{content: "\f4ad"} // 图标
+
+
 
 }
 
@@ -220,5 +254,23 @@ header.Hero.DiscussionHero{border-radius:0 0 4em 4em!important}
 
 // 手动与桌面端的header背景色设置同步
 .DiscussionPage .Hero{background:#d4d7d54f}
+
+// 未读/已读的颜色改善
+.IndexPage .read .DiscussionListItem-title{color:#636363!important}
+.IndexPage .read .DiscussionListItem-info{color:#7c7c7c!important}
+.IndexPage .read .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+.IndexPage .unread .DiscussionListItem-title{color:#636363!important}
+.IndexPage .unread .DiscussionListItem-info{color:#7c7c7c!important}
+.IndexPage .unread .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+
+// 未读/已读的颜色改善
+.UserPage .read .DiscussionListItem-title{color:#666666!important}
+.UserPage .read .DiscussionListItem-info{color:#7c7c7c!important}
+.UserPage .read .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+.UserPage .unread .DiscussionListItem-title{color:#666666!important}
+.UserPage .unread .DiscussionListItem-info{color:#7c7c7c!important}
+.UserPage .unread .DiscussionListItem-info .item-excerpt{color:#6f6f6f!important}
+
+
 
 }
