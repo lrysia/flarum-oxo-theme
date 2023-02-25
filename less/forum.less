@@ -1,3 +1,8 @@
+// 特殊语法说明
+// 1: .classA.classB    A类内的B类(必须为直接子类)
+// 2: .classA .classB   A类内的B类(可以间隔其它类)
+// 3: !important        无条件拥有最高权重，同时拥有最高权重的css将回到普通权重规则
+
 .card:hover { transform: unset!important}
 .card{
 	background: @body-bg;
@@ -18,29 +23,34 @@
 .hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#beda78!important}
 .hljs-subst{color:#a77fad!important}
 .hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#38984f!important}
+
 @media @tablet-up{
 body{background:fade(#191d21,100%)!important}
 .backgrwb,.backgrwbguest,.AfruxWidgets-Widget.Afrux-ForumStatsWidgetWidget,.AfruxWidgets-Widget:not(:last-child),.IndexPage .DiscussionListItem,.Post-body,.UserPage .DiscussionListItem,header.Hero.DiscussionHero,header.Hero.WelcomeHero,li.item-nav,.AfruxWidgets-Widget{background:fade(#181c1e,100%)!important;border-bottom:2px solid fade(#000,13%)!important}
 .App.BlogOverviewPage{background:fade(#000,97%)!important}
-.Post-body{box-shadow:rgba(0,0,0,.1) 0 1px 3px 0,rgba(0,0,0,.06) 0 1px 2px 0}
+.PostsUserPage-list .Post-body{box-shadow:rgba(0,0,0,.1) 0 1px 3px 0,rgba(0,0,0,.06) 0 1px 2px 0}
 .Avatar{border:unset!important}
 .card{background:#181c1e!important;border-bottom:2px solid rgba(0,0,0,.13)!important}
 .IndexPage .DiscussionListItem-title,.UserPage .DiscussionListItem-title{color:#988f81!important}
-.PostStream-item:not(:last-child){border:unset!important}
+.PostStream-item:not(:last-child){border-bottom:10px solid #E1E4E6!important}
 .DiscussionPage .Hero::before,.IndexPage .Hero::before{background:unset!important}
 p.welcomeText{background:#181c1e!important;color:#6c7f93!important}}
+
 @media (max-width:@screen-desktop){
 header.Hero.DiscussionHero,header.Hero.WelcomeHero{background:fade(#181c1e,100%)!important;border-bottom:unset!important}
 .Hero h2{font-size:18px!important;font-weight:600!important}
 .DiscussionListItem-title{font-size:14px!important;font-weight:600!important}
 .DiscussionHero--colored,.DiscussionHero--colored a{color:#959595!important}}
+
 @media @phone{.item-discussion-views{background:#1b2128!important}}
 }
+
 .Avatar{border:2px solid hsla(0,0%,90%,.5);border-radius:200px}
 .DiscussionListItem-author .Avatar{--size:45px}
 .DiscussionListItem-main{padding:12px 20px;padding-left:15px}
 .DiscussionListItem-badges{margin-top:10px;margin-left:-42px;width:48px}
-header.Hero.DiscussionHero,header.Hero.WelcomeHero{background:#ffffffa8;border-radius:15px;border-bottom:2px solid fade(#e5e5e5,70%)}
+header.Hero.WelcomeHero{background:#ffffffa8;border-radius:15px;border-bottom:2px solid fade(#e5e5e5,70%)}
+header.Hero.DiscussionHero{border-radius:15px;border-bottom:2px solid fade(#e5e5e5,70%)}
 .DiscussionPage-list a.DiscussionListItem-author{display:none}
 .DiscussionPage-list .DiscussionListItem-content{padding-left:40px}
 .DiscussionHero--colored,.DiscussionHero--colored a{color:@hero-color!important}
@@ -48,8 +58,9 @@ header.Hero.DiscussionHero,header.Hero.WelcomeHero{background:#ffffffa8;border-r
 .avatarwb .Avatar{box-shadow:rgba(0,0,0,.35) 0 1px 5px 0!important}
 .AfruxWidgets-Widget-content{width:auto!important;margin:0 auto!important}
 span.TagsLabel.mytagLabel{display:none}
+
 @media @tablet-up{
-body{background:fade(@config-secondary-color,5%)}
+body{background-color:fade(@config-secondary-color,5%)}
 span.Avatar.lastPostedUserAvatar,img.Avatar.lastPostedUserAvatar {
     width: 14px!important;
     height: 14px!important;
@@ -86,16 +97,15 @@ span.Avatar.lastPostedUserAvatar,img.Avatar.lastPostedUserAvatar {
 .DiscussionListItem-author .Avatar{--size:55px}
 .DiscussionListItem-info .item-excerpt{margin-right:auto}
 span.Avatar{display:inline-flex;overflow:hidden;font-size:55px;justify-content:center;align-items:center}
-.DiscussionPage .Hero::before,.IndexPage .Hero::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#0e6d4a0a;background-attachment:fixed;filter:blur(4px);z-index:-1}
 .App.BlogOverviewPage{background:fade(@config-secondary-color,10%)}
 .BlogSideWidget{box-shadow:0 5px 10px 0 rgba(0,0,0,.1);background:@body-bg}
 .Hero{border-radius:15px;margin:0 auto;margin-top:30px;max-width:1100px}
 .darkenBackground{border-radius:1em}
 flarum.oxo.v2-theme{author:yannisme}
-.Post-body{font-size:14px;line-height:1.7;position:relative;overflow:auto;overflow-wrap:break-word;border-radius:5px;margin-top:0;background:@body-bg;padding:20px;min-height:80px}
+.Post-body{font-size:14px;line-height:1.7;position:relative;overflow:auto;overflow-wrap:break-word;border-radius:5px;margin-top:0;padding:20px;min-height:80px}
 .IndexPage .DiscussionListItem,li.item-nav{padding:10px 25px;background:#ffffffa8;border-radius:15px;margin:15px auto;border-bottom:2px solid fade(#e5e5e5,70%)}
 .AfruxWidgets-Widget.Afrux-ForumStatsWidgetWidget,.AfruxWidgets-Widget{padding:15px;background:#ffffffa8;border-radius:15px;margin:15px auto;border-bottom:2px solid fade(#e5e5e5,70%)}
-.AfruxWidgets-Widget.Afrux-ForumStatsWidgetWidget,.AfruxWidgets-Widget,.Hero,.IndexPage .DiscussionListItem,.Post-body,li.item-nav{box-shadow:rgba(0,0,0,.1) 0 1px 3px 0,rgba(0,0,0,.06) 0 1px 2px 0}
+.AfruxWidgets-Widget.Afrux-ForumStatsWidgetWidget,.AfruxWidgets-Widget,.Hero,.IndexPage .DiscussionListItem,li.item-nav{box-shadow:rgba(0,0,0,.1) 0 1px 3px 0,rgba(0,0,0,.06) 0 1px 2px 0}
 .Notification{align-items:center}
 .Afrux-NewsWidget{border:0!important;border-radius:0!important;box-shadow:unset}
 .AfruxWidgets-Widget-title{font-weight:600;margin-bottom:8px!important;padding:8px 0 0 10px!important}
@@ -135,7 +145,43 @@ p.welcomeText:before{content:"\f507\0020";font-family:'Font Awesome 5 Free';disp
 	}
 }
 
+
+
+// 贴子页面(discussion page)
+
+// 调整post间分割线的样式(仿贴吧)
+.DiscussionPage .PostStream-item:not(:last-child){border-bottom:1px solid #E1E4E6}
+// 调整底部回复框样式，让回复框的边框常驻显示
+.DiscussionPage .ReplyPlaceholder{margin-bottom:100px; min-height:250px; border:2px solid @header-bg}
+// 这是一个覆盖全页面的before伪元素，在此用于单独设置帖子页面的background颜色
+.DiscussionPage .Hero::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#fffefb;background-attachment:fixed;z-index:-1}
+// 帖子header的背景色
+.DiscussionPage .Hero{background:#d4d7d54f}
+// 帖子header内的标签样式1: 主题帖列表中的样式
+// 需要配合更改tag插件内的common/TagLabel.less
+// 搜索: --tag-color: var(--tag-bg); 将这句注释掉即可
+//.DiscussionPage .item-tags{border-radius: 4px;background: var(--hero-bg)}
+//.DiscussionHero .TagsLabel .TagLabel.colored{margin-right:unset;background:unset!important}
+//.DiscussionHero .TagLabel-text{color:var(--tag-color)}
+// 帖子header内的标签样式2:
+.DiscussionHero .TagsLabel .TagLabel.colored{background:unset!important}
+// 帖子标题颜色
+.DiscussionPage .item-title{color:#4a4944}
+// 去除主题帖内的 左侧边主题帖列表 与 顶部导航栏的相应固定按钮
+.DiscussionPage .DiscussionPage-list{display:none}
+.Navigation-pin{display:none}
+
+// 用户页(user page)
+
+// 对用户页的post单独做一些显示效果
+.PostsUserPage .Post-body{background:@body-bg;box-shadow:rgba(0,0,0,.1) 0 1px 3px 0,rgba(0,0,0,.06) 0 1px 2px 0}
+// 去除用户页post中可能存在的最佳回复(累赘)
+.PostsUserPage .item-bestAnswerPost{display: none}
+// 压缩post间距
+.PostsUserPage .Post{padding-bottom: 6px}
+
 }
+
 @media (max-width:@screen-tablet-max){
 .DiscussionListItem-content{margin:10px;border-radius:10px}
 
@@ -151,7 +197,8 @@ span.Avatar.lastPostedUserAvatar,img.Avatar.lastPostedUserAvatar{width:14px!impo
 .DiscussionListItem-content{background:@body-bg;margin:5px 10px;box-shadow:rgba(0,0,0,.1) 0 1px 3px 0,rgba(0,0,0,.06) 0 1px 2px 0!important}
 .DiscussionListItem-title{font-weight:600}
 .Badge{--size:20px;box-shadow:unset;margin-top:8px}
-header.Hero.DiscussionHero,header.Hero.WelcomeHero{border-radius:0 0 4em 4em!important;background:@body-bg}
+header.Hero.WelcomeHero{border-radius:0 0 4em 4em!important;background:@body-bg}
+header.Hero.DiscussionHero{border-radius:0 0 4em 4em!important}
 .UserPage{
 .Hero,.darkenBackground {border-radius: 0 0 2em 2em!important;}}
 .Hero h2{font-size:18px!important;font-weight:600!important}
@@ -167,4 +214,11 @@ header.Hero.DiscussionHero,header.Hero.WelcomeHero{border-radius:0 0 4em 4em!imp
 .FlarumBlogItem .BlogForumNav.BlogSideWidget{background:unset;box-shadow:unset!important}
 .FlarumBlogItem li.item-nav{padding:unset}
 .BlogSideWidget h3,.BlogSideWidget-item{display:none!important}
+
+//去除移动端显示时底端的白边
+.App{padding-bottom:0px}
+
+// 手动与桌面端的header背景色设置同步
+.DiscussionPage .Hero{background:#d4d7d54f}
+
 }
